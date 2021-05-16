@@ -1,0 +1,25 @@
+# See: https://black.readthedocs.io/en/stable/pyproject_toml.html
+[tool.black]
+line-length = 120
+
+# See: https://python-poetry.org/docs/pyproject/
+[tool.poetry]
+name = "workflowsawaiting"
+version = "0.0.0"
+description = "Check for GitHub Actions workflow runs which are awaiting approval."
+authors = ["per1234"]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+ghapi = "^0.1.16"
+PyYAML = "^5.4.1"
+
+[tool.poetry.dev-dependencies]
+black = "^21.5b1"
+codespell = "^2.0.0"
+flake8 = "^3.9.2"
+pep8-naming = "^0.11.1"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
