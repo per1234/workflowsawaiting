@@ -1,0 +1,7 @@
+contact_links:
+  - name: Usage assistance
+    url: https://github.com/per1234/workflowsawaiting#readme
+    about: Detailed instructions for using this project.
+  - name: Approving workflows
+    url: https://docs.github.com/en/actions/managing-workflow-runs/approving-workflow-runs-from-public-forks
+    about: Directions for approving GitHub Actions workflow runs in PRs.
