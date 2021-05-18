@@ -10,3 +10,67 @@ This policy puts a large burden on repository maintainers. Even with an active m
 
 For this reason, it's useful to have a tool to monitor repositories for unapproved workflows.
 
+## Usage
+
+```
+poetry run python workflowsawaiting.py [OPTION]... CONFIG_PATH
+```
+
+### Arguments
+
+#### `CONFIG_PATH`
+
+**Required**
+
+Path to a [YAML](https://en.wikipedia.org/wiki/YAML) formatted file defining the repositories to monitor workflows in.
+
+See the [Configuration file](#configuration-file) section for details on the file format.
+It supports the following keys:
+
+### Options
+
+#### `--report-path`
+
+**Optional**
+
+Path to output a [JSON](https://www.json.org/) format report of the results to.
+
+#### `--verbose`
+
+**Optional**
+
+Output debug information.
+
+### Environment variables
+
+#### `GITHUB_TOKEN`
+
+**Required**
+
+[GitHub access token](https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token) to use for the GitHub API requests.
+
+## Configuration file
+
+The repositories to monitor workflows in are defined by a [YAML](https://en.wikipedia.org/wiki/YAML) formatted file.
+
+It is a list of configuration objects, which support the following keys:
+
+### `name`
+
+**Required**
+
+Repository owner or repository slug. If an owner, the configuration applies to all that owner's repositories, though subsequent configuration objects can modify that list.
+
+### `action`
+
+Supported values:
+
+- **`monitor`** (default)
+- **`ignore`**
+
+### `scope`
+
+Supported values:
+
+- **`maintaining`**: (default) monitor only repositories where the owner of [`GITHUB_TOKEN`](#github_token) has permissions.
+- **`all`**: monitor all repositories
