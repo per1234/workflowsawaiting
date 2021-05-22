@@ -10,6 +10,25 @@ This policy puts a large burden on repository maintainers. Even with an active m
 
 For this reason, it's useful to have a tool to monitor repositories for unapproved workflows.
 
+## Table of Contents
+
+<!-- toc -->
+
+- [Usage](#usage)
+  - [Arguments](#arguments)
+    - [`CONFIG_PATH`](#config_path)
+  - [Options](#options)
+    - [`--report-path`](#--report-path)
+    - [`--verbose`](#--verbose)
+  - [Environment variables](#environment-variables)
+    - [`GITHUB_TOKEN`](#github_token)
+- [Configuration file](#configuration-file)
+  - [`name`](#name)
+  - [`action`](#action)
+  - [`scope`](#scope)
+
+<!-- tocstop -->
+
 ## Usage
 
 ```
