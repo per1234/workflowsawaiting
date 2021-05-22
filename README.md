@@ -25,7 +25,6 @@ poetry run python workflowsawaiting.py [OPTION]... CONFIG_PATH
 Path to a [YAML](https://en.wikipedia.org/wiki/YAML) formatted file defining the repositories to monitor workflows in.
 
 See the [Configuration file](#configuration-file) section for details on the file format.
-It supports the following keys:
 
 ### Options
 
