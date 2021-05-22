@@ -88,15 +88,10 @@ def get_repositories_data(configuration_list):
             if in_scope(repository_data=repository_data, configuration_element=configuration_element):
                 repositories_data.append(repository_data)
         else:
-            user = gh_api.users.get_by_username(username=owner_name)
-            if user.type == "Organization":
-                repositories_pages = ghapi.page.pages(
-                    oper=gh_api.repos.list_for_org, n_pages=gh_api.last_page(), org=owner_name
-                )
+            if gh_api.users.get_by_username(username=owner_name).type == "Organization":
+                repositories_pages = ghapi.page.paged(oper=gh_api.repos.list_for_org, org=owner_name)
             else:
-                repositories_pages = ghapi.page.pages(
-                    oper=gh_api.repos.list_for_user, n_pages=gh_api.last_page(), username=owner_name
-                )
+                repositories_pages = ghapi.page.paged(oper=gh_api.repos.list_for_user, username=owner_name)
             for repositories_page in repositories_pages:
                 for repository_object in repositories_page:
                     repository_data = {
@@ -133,32 +128,31 @@ def in_scope(repository_data, configuration_element):
     if "scope" in configuration_element and configuration_element["scope"] == "all":
         return True
 
-    # Determine if user has sufficient permissions in the repository_data to approve the workflow run
+    # Determine if user has sufficient permissions in the repository to approve the workflow run
     return not repository_data["object"].archived and (
         repository_data["permissions"] == "write" or repository_data["permissions"] == "admin"
     )
 
 
 def get_runs(repository_data):
-    """Return a list of URLs for workflow runs awaiting approval in the given repo.
+    """Return a list of URLs for workflow runs awaiting approval in the given repository.
 
     Keyword arguments:
     repository_data -- data for the repository
     """
     run_urls = []
-    runs_pages = ghapi.page.pages(
+    runs_pages = ghapi.page.paged(
         oper=gh_api.actions.list_workflow_runs_for_repo,
-        n_pages=gh_api.last_page(),
         owner=repository_data["object"].owner.login,
         repo=repository_data["object"].name,
         event="pull_request",
         status="action_required",
     )
     for runs_page in runs_pages:
-        # if not runs_page.workflow_runs:
-        #     # The paged generator gets stuck in an infinite loop on the total_count key after all the runs are
-        #     # iterated over
-        #     break
+        if not runs_page.workflow_runs:
+            # The paged generator gets stuck in an infinite loop on the total_count key after all the runs are
+            # iterated over
+            break
         for run in runs_page.workflow_runs:
             print("Run", run.html_url, "needs approval")
             run_urls.append(run.html_url)
