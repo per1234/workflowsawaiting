@@ -73,11 +73,13 @@ The repositories to monitor workflows in are defined by a [YAML](https://en.wiki
 
 It is a list of configuration objects, which support the following keys:
 
-### `name`
+### `owner`
 
-**Required**
+Repository owner. If an owner, the configuration applies to all that owner's repositories, though subsequent configuration objects can modify that list.
 
-Repository owner or repository slug. If an owner, the configuration applies to all that owner's repositories, though subsequent configuration objects can modify that list.
+### `repo`
+
+Repository name. If no `repo` is specified by a configuration object, the `action` is applied to all the owner's repositories which are in the `scope`, though subsequent configuration objects can modify that list.
 
 ### `action`
 
