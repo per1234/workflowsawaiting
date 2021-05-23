@@ -23,7 +23,8 @@ For this reason, it's useful to have a tool to monitor repositories for unapprov
   - [Environment variables](#environment-variables)
     - [`GITHUB_TOKEN`](#github_token)
 - [Configuration file](#configuration-file)
-  - [`name`](#name)
+  - [`owner`](#owner)
+  - [`repo`](#repo)
   - [`action`](#action)
   - [`scope`](#scope)
 
