@@ -67,8 +67,13 @@ def get_repositories_data(configuration_list):
             repositories_data[:] = list(
                 itertools.filterfalse(
                     predicate=(
-                        lambda repository: configuration_element["name"] == repository["object"].full_name
-                        or configuration_element["name"] == repository["object"].owner.login,
+                        lambda repository: (
+                            configuration_element["owner"] == repository["object"].owner.login
+                            and (
+                                "repo" not in configuration_element
+                                or configuration_element["repo"] == repository["object"].name
+                            )
+                        ),
                     ),
                     iterable=repositories_data,
                 )
@@ -76,29 +81,32 @@ def get_repositories_data(configuration_list):
 
             continue
 
-        split_name = configuration_element["name"].split(sep="/", maxsplit=1)
-        owner_name = split_name[0]
-        repository_name = None
-        if len(split_name) > 1:
-            repository_name = split_name[1]
-
-        if repository_name:
-            repository_data = {"object": gh_api.repos.get(owner=owner_name, repo=repository_name)}
+        if "repo" in configuration_element:
+            repository_data = {
+                "configuration": configuration_element,
+                "object": gh_api.repos.get(owner=configuration_element["owner"], repo=configuration_element["repo"]),
+            }
             repository_data["permissions"] = get_permissions(repository_object=repository_data["object"])
-            if in_scope(repository_data=repository_data, configuration_element=configuration_element):
+            if in_scope(repository_data=repository_data):
                 repositories_data.append(repository_data)
+
         else:
-            if gh_api.users.get_by_username(username=owner_name).type == "Organization":
-                repositories_pages = ghapi.page.paged(oper=gh_api.repos.list_for_org, org=owner_name)
+            if gh_api.users.get_by_username(username=configuration_element["owner"]).type == "Organization":
+                repositories_pages = ghapi.page.paged(
+                    oper=gh_api.repos.list_for_org, org=configuration_element["owner"]
+                )
             else:
-                repositories_pages = ghapi.page.paged(oper=gh_api.repos.list_for_user, username=owner_name)
+                repositories_pages = ghapi.page.paged(
+                    oper=gh_api.repos.list_for_user, username=configuration_element["owner"]
+                )
             for repositories_page in repositories_pages:
                 for repository_object in repositories_page:
                     repository_data = {
+                        "configuration": configuration_element,
                         "object": repository_object,
                         "permissions": get_permissions(repository_object=repository_object),
                     }
-                    if in_scope(repository_data=repository_data, configuration_element=configuration_element):
+                    if in_scope(repository_data=repository_data):
                         repositories_data.append(repository_data)
 
     return repositories_data
@@ -118,14 +126,13 @@ def get_permissions(repository_object):
         return None
 
 
-def in_scope(repository_data, configuration_element):
+def in_scope(repository_data):
     """Return whether the given repository is in scope for the configuration.
 
     Keyword arguments:
     repository_data -- data for the repository
-    configuration_element -- the configuration object that yielded the repository
     """
-    if "scope" in configuration_element and configuration_element["scope"] == "all":
+    if "scope" in repository_data["configuration"] and repository_data["configuration"]["scope"] == "all":
         return True
 
     # Determine if user has sufficient permissions in the repository to approve the workflow run
