@@ -14,6 +14,7 @@ For this reason, it's useful to have a tool to monitor repositories for unapprov
 
 <!-- toc -->
 
+- [Dependencies](#dependencies)
 - [Usage](#usage)
   - [Arguments](#arguments)
     - [`CONFIG_PATH`](#config_path)
@@ -29,6 +30,19 @@ For this reason, it's useful to have a tool to monitor repositories for unapprov
   - [`scope`](#scope)
 
 <!-- tocstop -->
+
+## Dependencies
+
+Required tools:
+
+- [Python](https://www.python.org/) 3.9
+- [Poetry](http://python-poetry.org/) - Used for dependency management
+
+Run the following from the project's root folder to install the Python module dependencies:
+
+```
+poetry install
+```
 
 ## Usage
 
