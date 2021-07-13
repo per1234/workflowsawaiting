@@ -125,6 +125,9 @@ def get_permissions(repository_object):
     except fastcore.all.HTTP403ForbiddenError:
         return None
     except fastcore.all.HTTP404NotFoundError:
+        # TODO: This is a provisional workaround. I need to figure out why I suddenly started getting 404 statuses from
+        # this API request.
+        return None
         if repository_object.archived:
             # For some reason a 404 status is returned in the case of an archived repo where you don't have permissions
             return None
