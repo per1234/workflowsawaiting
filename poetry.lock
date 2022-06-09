@@ -80,7 +80,7 @@ pyflakes = ">=2.4.0,<2.5.0"
 
 [[package]]
 name = "ghapi"
-version = "0.1.19"
+version = "0.1.20"
 description = "A python client for the GitHub API"
 category = "main"
 optional = false
@@ -202,7 +202,7 @@ python-versions = "*"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.9"
-content-hash = "d67740d8d99471215a4587df0f4cce18e4b5120dcd95dfac24bc0fb4362e3690"
+content-hash = "7b83923f0e87928936b654b738cd866f2338e352eeb483037a865e67e55e7ccd"
 
 [metadata.files]
 black = [
@@ -251,8 +251,8 @@ flake8 = [
     {file = "flake8-4.0.1.tar.gz", hash = "sha256:806e034dda44114815e23c16ef92f95c91e4c71100ff52813adf7132a6ad870d"},
 ]
 ghapi = [
-    {file = "ghapi-0.1.19-py3-none-any.whl", hash = "sha256:6f18bc621b498e6c530c2fefea3bd7255860a4d2667de6b7a5301cd67057e959"},
-    {file = "ghapi-0.1.19.tar.gz", hash = "sha256:d8d7012a6b275c1b691de9854504b11d6c41b36db7002992c2e2d51320f9758b"},
+    {file = "ghapi-0.1.20-py3-none-any.whl", hash = "sha256:f9b060b1d57629876b0903d7decd729188ba430617be5c8395efa1763cffbd43"},
+    {file = "ghapi-0.1.20.tar.gz", hash = "sha256:7120031e7e1c08b3508312b635a39e3cd0659212e8a41792b82b9ef34b028472"},
 ]
 mccabe = [
     {file = "mccabe-0.6.1-py2.py3-none-any.whl", hash = "sha256:ab8a6258860da4b6677da4bd2fe5dc2c659cff31b3ee4f7f5d64e79735b80d42"},
