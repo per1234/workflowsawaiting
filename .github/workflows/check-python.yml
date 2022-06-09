@@ -1,5 +1,8 @@
 name: Check Python
 
+env:
+  PYTHON_VERSION: "3.9"
+
 # See: https://docs.github.com/en/actions/reference/events-that-trigger-workflows
 on:
   push:
@@ -52,6 +55,8 @@ jobs:
 
       - name: Install Python
         uses: actions/setup-python@v4
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
 
       - name: Check formatting
         uses: psf/black@stable
