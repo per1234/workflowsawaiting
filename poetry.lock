@@ -67,7 +67,7 @@ dev = ["numpy", "nbdev (>=0.2.39)", "matplotlib", "pillow", "torch", "pandas"]
 
 [[package]]
 name = "flake8"
-version = "5.0.3"
+version = "5.0.4"
 description = "the modular source code checker: pep8 pyflakes and co"
 category = "dev"
 optional = false
@@ -202,7 +202,7 @@ python-versions = "*"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.9"
-content-hash = "cae46b766ec8089b9ddf84d7b5854287b28b0b84531406d643777f876430bb56"
+content-hash = "6c35e02773d0f5662eb0705088c21bff5a461f5722938e34e21b1ef60f5e1814"
 
 [metadata.files]
 black = [
@@ -247,8 +247,8 @@ fastcore = [
     {file = "fastcore-1.3.20.tar.gz", hash = "sha256:cd45dcbfe5869cf174bc98eb931be609e8f8d55062bc3d68700a921136548a77"},
 ]
 flake8 = [
-    {file = "flake8-5.0.3-py2.py3-none-any.whl", hash = "sha256:93aa565ae2f0316b95bb57a354f2b2d55ee8508e1fe1cb13b77b9c195b4a2537"},
-    {file = "flake8-5.0.3.tar.gz", hash = "sha256:b27fd7faa8d90aaae763664a489012292990388e5d3604f383b290caefbbc922"},
+    {file = "flake8-5.0.4-py2.py3-none-any.whl", hash = "sha256:7a1cf6b73744f5806ab95e526f6f0d8c01c66d7bbe349562d22dfca20610b248"},
+    {file = "flake8-5.0.4.tar.gz", hash = "sha256:6fbe320aad8d6b95cec8b8e47bc933004678dc63095be98528b7bdd2a9f510db"},
 ]
 ghapi = [
     {file = "ghapi-0.1.19-py3-none-any.whl", hash = "sha256:6f18bc621b498e6c530c2fefea3bd7255860a4d2667de6b7a5301cd67057e959"},
