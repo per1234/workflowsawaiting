@@ -53,17 +53,17 @@ python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
 
 [[package]]
 name = "fastcore"
-version = "1.3.20"
+version = "1.5.22"
 description = "Python supercharged for fastai development"
 category = "main"
 optional = false
-python-versions = ">=3.6"
+python-versions = ">=3.7"
 
 [package.dependencies]
 packaging = "*"
 
 [package.extras]
-dev = ["matplotlib", "nbdev (>=0.2.39)", "numpy", "pandas", "pillow", "torch"]
+dev = ["jupyterlab", "matplotlib", "nbdev (>=0.2.39)", "numpy", "pandas", "pillow", "torch"]
 
 [[package]]
 name = "flake8"
@@ -80,18 +80,18 @@ pyflakes = ">=2.5.0,<2.6.0"
 
 [[package]]
 name = "ghapi"
-version = "0.1.19"
+version = "1.0.2"
 description = "A python client for the GitHub API"
 category = "main"
 optional = false
-python-versions = ">=3.6"
+python-versions = ">=3.7"
 
 [package.dependencies]
-fastcore = "*"
+fastcore = ">=1.5.4"
 packaging = "*"
 
 [package.extras]
-dev = ["jsonref"]
+dev = ["jsonref", "matplotlib"]
 
 [[package]]
 name = "mccabe"
@@ -202,7 +202,7 @@ python-versions = "*"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.9"
-content-hash = "97b59db5176a7bfecca64753a68b4786eecda94603a04e70e36921919005c641"
+content-hash = "808d36113971bdc05fffaa9c1f3bce405949eab052023ea4e09ec3fb269a2996"
 
 [metadata.files]
 black = [
@@ -243,16 +243,16 @@ colorama = [
     {file = "colorama-0.4.4.tar.gz", hash = "sha256:5941b2b48a20143d2267e95b1c2a7603ce057ee39fd88e7329b0c292aa16869b"},
 ]
 fastcore = [
-    {file = "fastcore-1.3.20-py3-none-any.whl", hash = "sha256:084ff680813f09cc85883b05bb616bdee09d214245840c6fb52fb16c71b1aced"},
-    {file = "fastcore-1.3.20.tar.gz", hash = "sha256:cd45dcbfe5869cf174bc98eb931be609e8f8d55062bc3d68700a921136548a77"},
+    {file = "fastcore-1.5.22-py3-none-any.whl", hash = "sha256:96ec9b23cd95f969a3bd0a118aed92a60c7da80d89716ac3585cacc9b26a708a"},
+    {file = "fastcore-1.5.22.tar.gz", hash = "sha256:73c3f268f882955038237bd7d134e5d872d116577ed586025641ecc08b2706c4"},
 ]
 flake8 = [
     {file = "flake8-5.0.4-py2.py3-none-any.whl", hash = "sha256:7a1cf6b73744f5806ab95e526f6f0d8c01c66d7bbe349562d22dfca20610b248"},
     {file = "flake8-5.0.4.tar.gz", hash = "sha256:6fbe320aad8d6b95cec8b8e47bc933004678dc63095be98528b7bdd2a9f510db"},
 ]
 ghapi = [
-    {file = "ghapi-0.1.19-py3-none-any.whl", hash = "sha256:6f18bc621b498e6c530c2fefea3bd7255860a4d2667de6b7a5301cd67057e959"},
-    {file = "ghapi-0.1.19.tar.gz", hash = "sha256:d8d7012a6b275c1b691de9854504b11d6c41b36db7002992c2e2d51320f9758b"},
+    {file = "ghapi-1.0.2-py3-none-any.whl", hash = "sha256:12fd203bab9c81197fa62cd732dd5736565e419b959e5c3f3c9f6ee8ceeac301"},
+    {file = "ghapi-1.0.2.tar.gz", hash = "sha256:460abd7bdcb7259c6120f06bdffd4c6fae8ed2cf9e7ddc57a69cb6168961b59e"},
 ]
 mccabe = [
     {file = "mccabe-0.7.0-py2.py3-none-any.whl", hash = "sha256:6c2d30ab6be0e4a46919781807b4f0d834ebdd6c6e3dca0bda5a15f863427b6e"},
