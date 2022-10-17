@@ -16,7 +16,7 @@ PyYAML = "^5.4.1"
 
 [tool.poetry.dev-dependencies]
 black = "^22.10"
-codespell = "^2.2.1"
+codespell = "^2.2.2"
 flake8 = "^5.0.4"
 pep8-naming = "^0.13.2"
 
