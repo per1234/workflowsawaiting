@@ -6,7 +6,7 @@ From https://docs.github.com/en/actions/managing-workflow-runs/approving-workflo
 
 > workflows on pull requests are not run automatically if they are received from first-time contributors, and must be approved first
 
-This policy puts a large burden on repository maintainers. Even with an active maintainer, it can result in will be significant delays in the important feedback cycle between contributors and the CI system for first PRs, which are the very ones that benefit the most from an automated validation system. It can be easy for maintainers to overlook that a push to a PR necessitates another approval.
+This policy puts a large burden on repository maintainers. Even with an active maintainer, it can introduce significant delays in the important feedback cycle between contributors and the CI system. The first time PRs targeted by the system are often the very ones that benefit the most from an automated validation system. It can be easy for maintainers to overlook that each push to a PR necessitates another approval.
 
 For this reason, it's useful to have a tool to monitor repositories for unapproved workflows.
 
