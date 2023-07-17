@@ -31,7 +31,7 @@ jobs:
             maxdepth: 4
 
     steps:
-      - name: Checkout repository_data
+      - name: Checkout repository
         uses: actions/checkout@v3
 
       - name: Install markdown-toc
