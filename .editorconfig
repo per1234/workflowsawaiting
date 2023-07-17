@@ -1,3 +1,4 @@
+# Source: https://github.com/arduino/tooling-project-assets/blob/main/workflow-templates/assets/general/.editorconfig
 # See: https://editorconfig.org/
 # Note: indent style for each file type is defined even when it matches the universal config in order to make it clear
 # that this type has an official style.

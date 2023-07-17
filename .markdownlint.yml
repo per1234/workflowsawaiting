@@ -1,3 +1,4 @@
+# Source: https://github.com/arduino/tooling-project-assets/blob/main/workflow-templates/assets/check-markdown/.markdownlint.yml
 # See: https://github.com/DavidAnson/markdownlint/blob/main/doc/Rules.md
 # Note: Rules disabled solely because they are redundant to Prettier are marked with a "Prettier" comment.
 
