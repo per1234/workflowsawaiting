@@ -43,6 +43,8 @@ jobs:
   check:
     name: ${{ matrix.configuration.name }}
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
 
     strategy:
       fail-fast: false
