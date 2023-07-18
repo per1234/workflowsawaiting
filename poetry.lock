@@ -90,13 +90,13 @@ files = [
 
 [[package]]
 name = "fastcore"
-version = "1.3.20"
+version = "1.5.29"
 description = "Python supercharged for fastai development"
 optional = false
-python-versions = ">=3.6"
+python-versions = ">=3.7"
 files = [
-    {file = "fastcore-1.3.20-py3-none-any.whl", hash = "sha256:084ff680813f09cc85883b05bb616bdee09d214245840c6fb52fb16c71b1aced"},
-    {file = "fastcore-1.3.20.tar.gz", hash = "sha256:cd45dcbfe5869cf174bc98eb931be609e8f8d55062bc3d68700a921136548a77"},
+    {file = "fastcore-1.5.29-py3-none-any.whl", hash = "sha256:a7d7e89faf968f2d8584df2deca344c3974f6cf476e1299cd3c067d8fa7440e9"},
+    {file = "fastcore-1.5.29.tar.gz", hash = "sha256:f1a2eb04eb7933f3f9eb4064852817df44dc96e20fab5658c14c035815269a3f"},
 ]
 
 [package.dependencies]
@@ -104,7 +104,7 @@ packaging = "*"
 pip = "*"
 
 [package.extras]
-dev = ["matplotlib", "nbdev (>=0.2.39)", "numpy", "pandas", "pillow", "torch"]
+dev = ["jupyterlab", "matplotlib", "nbdev (>=0.2.39)", "numpy", "pandas", "pillow", "torch"]
 
 [[package]]
 name = "flake8"
@@ -124,22 +124,22 @@ pyflakes = ">=3.0.0,<3.1.0"
 
 [[package]]
 name = "ghapi"
-version = "0.1.19"
+version = "1.0.4"
 description = "A python client for the GitHub API"
 optional = false
-python-versions = ">=3.6"
+python-versions = ">=3.7"
 files = [
-    {file = "ghapi-0.1.19-py3-none-any.whl", hash = "sha256:6f18bc621b498e6c530c2fefea3bd7255860a4d2667de6b7a5301cd67057e959"},
-    {file = "ghapi-0.1.19.tar.gz", hash = "sha256:d8d7012a6b275c1b691de9854504b11d6c41b36db7002992c2e2d51320f9758b"},
+    {file = "ghapi-1.0.4-py3-none-any.whl", hash = "sha256:cb5c7008a89c270157adbaf5b2fd6951e9d9fc76131b9bec16118a558a6a4c04"},
+    {file = "ghapi-1.0.4.tar.gz", hash = "sha256:9e7632c762d6f9c288e3b046b2d58c2f7992dda7c925683df435440912b10625"},
 ]
 
 [package.dependencies]
-fastcore = "*"
+fastcore = ">=1.5.4"
 packaging = "*"
 pip = "*"
 
 [package.extras]
-dev = ["jsonref"]
+dev = ["jsonref", "matplotlib"]
 
 [[package]]
 name = "mccabe"
@@ -321,4 +321,4 @@ files = [
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.9"
-content-hash = "88d26f1426ac755363ba8913391827d93f046c06a0cdc33c1da65f01c31e6997"
+content-hash = "8f6ab08614532690968d11044cdbc18a60d0d7109dd14eccd1f3044c69cb683b"
