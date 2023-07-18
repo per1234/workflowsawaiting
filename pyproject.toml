@@ -12,7 +12,7 @@ authors = ["per1234"]
 [tool.poetry.dependencies]
 python = "^3.9"
 ghapi = "^0.1.19"
-PyYAML = "^5.4.1"
+PyYAML = "^6.0.1"
 
 [tool.poetry.dev-dependencies]
 black = "^23.7"
