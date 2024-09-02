@@ -90,21 +90,20 @@ files = [
 
 [[package]]
 name = "fastcore"
-version = "1.5.29"
+version = "1.7.3"
 description = "Python supercharged for fastai development"
 optional = false
-python-versions = ">=3.7"
+python-versions = ">=3.8"
 files = [
-    {file = "fastcore-1.5.29-py3-none-any.whl", hash = "sha256:a7d7e89faf968f2d8584df2deca344c3974f6cf476e1299cd3c067d8fa7440e9"},
-    {file = "fastcore-1.5.29.tar.gz", hash = "sha256:f1a2eb04eb7933f3f9eb4064852817df44dc96e20fab5658c14c035815269a3f"},
+    {file = "fastcore-1.7.3-py3-none-any.whl", hash = "sha256:d1d94a28cdc43e8c525c403112f231f59d38d95f04df579ca91ddfa8b9216329"},
+    {file = "fastcore-1.7.3.tar.gz", hash = "sha256:a24facbce2ea9ca4883e24bda8fe910e3b59c50603207da25847a774cb92ee94"},
 ]
 
 [package.dependencies]
 packaging = "*"
-pip = "*"
 
 [package.extras]
-dev = ["jupyterlab", "matplotlib", "nbdev (>=0.2.39)", "numpy", "pandas", "pillow", "torch"]
+dev = ["matplotlib", "nbclassic", "nbdev (>=0.2.39)", "numpy", "pandas", "pillow", "torch"]
 
 [[package]]
 name = "flake8"
@@ -124,19 +123,18 @@ pyflakes = ">=3.2.0,<3.3.0"
 
 [[package]]
 name = "ghapi"
-version = "1.0.5"
+version = "1.0.6"
 description = "A python client for the GitHub API"
 optional = false
 python-versions = ">=3.7"
 files = [
-    {file = "ghapi-1.0.5-py3-none-any.whl", hash = "sha256:24a851b7a256861f173437c807701beac3857a84979067ddc25a8555868ce6dc"},
-    {file = "ghapi-1.0.5.tar.gz", hash = "sha256:57f170d50d4e6cbf475d234056c54b1ea7bb917b96b0a19798f6127d8a0c40b1"},
+    {file = "ghapi-1.0.6-py3-none-any.whl", hash = "sha256:b3d96bf18fcaa2cb7131bad9de2948e2a1c2bb226377a25826f6c80950c57854"},
+    {file = "ghapi-1.0.6.tar.gz", hash = "sha256:64fdd9f06d8e3373065c42c2a03e067e2bbb9ca18b583cd6e38a28aaad0224f6"},
 ]
 
 [package.dependencies]
-fastcore = ">=1.5.4"
+fastcore = ">=1.7.2"
 packaging = "*"
-pip = "*"
 
 [package.extras]
 dev = ["jsonref", "matplotlib"]
@@ -198,17 +196,6 @@ files = [
 
 [package.dependencies]
 flake8 = ">=5.0.0"
-
-[[package]]
-name = "pip"
-version = "23.3"
-description = "The PyPA recommended tool for installing Python packages."
-optional = false
-python-versions = ">=3.7"
-files = [
-    {file = "pip-23.3-py3-none-any.whl", hash = "sha256:bc38bb52bc286514f8f7cb3a1ba5ed100b76aaef29b521d48574329331c5ae7b"},
-    {file = "pip-23.3.tar.gz", hash = "sha256:bb7d4f69f488432e4e96394612f43ab43dd478d073ef7422604a570f7157561e"},
-]
 
 [[package]]
 name = "platformdirs"
@@ -334,4 +321,4 @@ files = [
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.9"
-content-hash = "eb182975da89e502487a2d52daadd210adea399a28d08e91c2dc679a04977461"
+content-hash = "4bcf261074349333d786d9ea6bd2d9bf58288ca744e78863689d6b94e4deaf62"
