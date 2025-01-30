@@ -15,7 +15,7 @@ ghapi = "1.0.6"
 PyYAML = "^6.0.2"
 
 [tool.poetry.dev-dependencies]
-black = "^24.10"
+black = "^25.1"
 codespell = "^2.4.1"
 flake8 = "^7.1.1"
 pep8-naming = "^0.14.1"
