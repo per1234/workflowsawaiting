@@ -66,16 +66,14 @@ def get_repositories_data(configuration_list):
             # Remove any matching repos from the list
             repositories_data[:] = list(
                 itertools.filterfalse(
-                    predicate=(
-                        lambda repository: (
-                            configuration_element["owner"] == repository["object"].owner.login
-                            and (
-                                "repo" not in configuration_element
-                                or configuration_element["repo"] == repository["object"].name
-                            )
-                        ),
+                    lambda repository: (
+                        configuration_element["owner"] == repository["object"].owner.login
+                        and (
+                            "repo" not in configuration_element
+                            or configuration_element["repo"] == repository["object"].name
+                        )
                     ),
-                    iterable=repositories_data,
+                    repositories_data,
                 )
             )
 
