@@ -11,7 +11,7 @@ authors = ["per1234"]
 
 [tool.poetry.dependencies]
 python = "^3.9"
-ghapi = "1.0.7"
+ghapi = "1.0.8"
 PyYAML = "^6.0.2"
 
 [tool.poetry.dev-dependencies]
