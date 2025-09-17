@@ -130,14 +130,14 @@ pyflakes = ">=3.4.0,<3.5.0"
 
 [[package]]
 name = "ghapi"
-version = "1.0.6"
+version = "1.0.7"
 description = "A python client for the GitHub API"
 optional = false
 python-versions = ">=3.7"
 groups = ["main"]
 files = [
-    {file = "ghapi-1.0.6-py3-none-any.whl", hash = "sha256:b3d96bf18fcaa2cb7131bad9de2948e2a1c2bb226377a25826f6c80950c57854"},
-    {file = "ghapi-1.0.6.tar.gz", hash = "sha256:64fdd9f06d8e3373065c42c2a03e067e2bbb9ca18b583cd6e38a28aaad0224f6"},
+    {file = "ghapi-1.0.7-py3-none-any.whl", hash = "sha256:1e8eff961b02a607cec477148c3fd12e3ba7c35e58d0c934c48d36a652ab25e2"},
+    {file = "ghapi-1.0.7.tar.gz", hash = "sha256:ac8dcd73cd60504a85871a136d425a046dedd7f0da0646fc3593de07a2992532"},
 ]
 
 [package.dependencies]
@@ -145,7 +145,7 @@ fastcore = ">=1.7.2"
 packaging = "*"
 
 [package.extras]
-dev = ["jsonref", "matplotlib"]
+dev = ["jsonref", "llms-txt", "matplotlib", "nbclassic", "nbdev", "pysymbol_llm"]
 
 [[package]]
 name = "mccabe"
@@ -342,4 +342,4 @@ files = [
 [metadata]
 lock-version = "2.1"
 python-versions = "^3.9"
-content-hash = "5967cd7fd02df0659aaf32a40ba824887e0462c4114f68c55bc57af270b06dd3"
+content-hash = "2a870771c62b685d70b3c3658ea09a36d7623971d469a1f786f2d91cff91f487"
