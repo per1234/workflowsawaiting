@@ -130,14 +130,14 @@ pyflakes = ">=3.4.0,<3.5.0"
 
 [[package]]
 name = "ghapi"
-version = "1.0.7"
+version = "1.0.8"
 description = "A python client for the GitHub API"
 optional = false
 python-versions = ">=3.7"
 groups = ["main"]
 files = [
-    {file = "ghapi-1.0.7-py3-none-any.whl", hash = "sha256:1e8eff961b02a607cec477148c3fd12e3ba7c35e58d0c934c48d36a652ab25e2"},
-    {file = "ghapi-1.0.7.tar.gz", hash = "sha256:ac8dcd73cd60504a85871a136d425a046dedd7f0da0646fc3593de07a2992532"},
+    {file = "ghapi-1.0.8-py3-none-any.whl", hash = "sha256:3e4023f475ec966995dd3feeacd3f42f9e296dd23148e6f28d15e80487300e66"},
+    {file = "ghapi-1.0.8.tar.gz", hash = "sha256:9ab02dcd06b3c622ea2d9b21a2efee316076a744ce7847251a2fe9f542f381df"},
 ]
 
 [package.dependencies]
@@ -342,4 +342,4 @@ files = [
 [metadata]
 lock-version = "2.1"
 python-versions = "^3.9"
-content-hash = "2a870771c62b685d70b3c3658ea09a36d7623971d469a1f786f2d91cff91f487"
+content-hash = "9b6bd098f72986d2845e44fbf3b01296a964e99e4403c3625242e3d4d7935f28"
