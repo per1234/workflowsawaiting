@@ -10,7 +10,7 @@ description = "Check for GitHub Actions workflow runs which are awaiting approva
 authors = ["per1234"]
 
 [tool.poetry.dependencies]
-python = "^3.9"
+python = ">=3.9, <3.14.0"
 ghapi = "1.0.8"
 PyYAML = "^6.0.3"
 
